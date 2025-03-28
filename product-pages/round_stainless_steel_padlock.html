@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aalart Product - Details, specifications, and purchasing information for top-quality security solutions.">
+    <title>Product Name - Aalart India No. 1</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* Product Detail Page Specific Styles */
+        .product-hero {
+            background: linear-gradient(rgba(15, 76, 129, 0.8), rgba(15, 76, 129, 0.9)), url('../images/products-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 150px 0 70px;
+            text-align: center;
+        }
+
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .breadcrumb a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--white);
+        }
+
+        .breadcrumb span {
+            margin: 0 0.5rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .product-detail-container {
+            padding: 4rem 0;
+        }
+
+        .product-detail {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .product-gallery {
+            position: relative;
+        }
+
+        .product-main-image {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            margin-bottom: 1rem;
+            height: 400px;
+        }
+
+        .product-main-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .product-thumbnails {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+        }
+
+        .product-thumbnail {
+            height: 80px;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            transition: var(--transition);
+            opacity: 0.7;
+        }
+
+        .product-thumbnail.active {
+            opacity: 1;
+            box-shadow: 0 0 0 2px var(--secondary);
+        }
+
+        .product-thumbnail:hover {
+            opacity: 1;
+        }
+
+        .product-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .product-info-block h1 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .product-category {
+            display: inline-block;
+            background-color: rgba(15, 76, 129, 0.1);
+            color: var(--primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-description {
+            margin-bottom: 2rem;
+            color: var(--text-light);
+        }
+
+        .product-features-list {
+            margin-bottom: 2rem;
+        }
+
+        .product-features-list h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .product-features-list ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .product-features-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.75rem;
+            color: var(--text-light);
+        }
+
+        .product-features-list li i {
+            color: var(--secondary);
+            margin-right: 0.75rem;
+            min-width: 16px;
+        }
+
+        .product-specs {
+            margin-bottom: 2rem;
+        }
+
+        .product-specs h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .specs-table tr {
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .specs-table tr:last-child {
+            border-bottom: none;
+        }
+
+        .specs-table td {
+            padding: 0.75rem 0;
+        }
+
+        .specs-table td:first-child {
+            font-weight: 500;
+            color: var(--primary);
+            width: 40%;
+        }
+
+        .specs-table td:last-child {
+            color: var(--text-light);
+        }
+
+        .product-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .download-brochure {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .download-brochure i {
+            font-size: 1.2rem;
+        }
+
+        /* Related Products Section */
+        .related-products {
+            padding: 4rem 0;
+            background-color: var(--light-bg);
+        }
+
+        .related-products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 992px) {
+            .product-detail {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .product-main-image {
+                height: 350px;
+            }
+        }
+        .product-price h2 {
+            color: #d9534f;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    
+        .product-price span {
+            font-size: 18px;
+            color: #666;
+        }
+    
+        .product-seller {
+            font-size: 16px;
+            color: #444;
+            margin-bottom: 10px;
+        }
+        @media (max-width: 576px) {
+            .product-thumbnails {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .product-main-image {
+                height: 300px;
+            }
+
+            .product-actions {
+                flex-direction: column;
+            }
+
+            .product-actions .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <div class="logo-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>AALART</h1>
+                        <p>INDIA NO. 1</p>
+                    </div>
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about.html">About Us</a></li>
+                    <li><a href="../products.html" class="active">Products</a></li>
+                    <li><a href="../contact.html">Contact Us</a></li>
+                </ul>
+                <div class="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About Us</a></li>
+            <li><a href="../products.html" class="active">Products</a></li>
+            <li><a href="../contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <!-- Product Hero Section -->
+    <section class="product-hero">
+        <div class="container">
+            <h1 id="product-title">Product Name</h1>
+            <p id="product-subtitle">Product subtitle or brief description</p>
+            
+            <div class="breadcrumb">
+                <a href="../index.html">Home</a>
+                <span>/</span>
+                <a href="../products.html">Products</a>
+                <span>/</span>
+                <a href="#" class="active" id="breadcrumb-product-name">Product Name</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail-container">
+        <div class="container">
+            <div class="product-detail">
+                <!-- Product Gallery -->
+                <div class="product-gallery">
+                    <div class="product-main-image">
+                        <img id="main-product-image" src="C:/Users/Mayank/Desktop/website/Gemini_Generated_Image_rou5kwrou5kwrou5.jpeg" alt="Product Name">
+                    </div>
+                    <div class="product-thumbnails">
+                        <div class="product-thumbnail active" data-image="../images/products/product-main.jpg">
+                            <img src="C:/Users/Mayank/Desktop/website/Gemini_Generated_Image_rou5kwrou5kwrou5.jpeg" alt="Product thumbnail 1">
+                        </div>
+                        <div class="product-thumbnail" data-image="../images/products/product-angle1.jpg">
+                            <img src="C:/Users/Mayank/Desktop/website/Gemini_Generated_Image_rou5kwrou5kwrou5.jpeg" alt="Product thumbnail 2">
+                        </div>
+                        <div class="product-thumbnail" data-image="../images/products/product-angle2.jpg">
+                            <img src="C:/Users/Mayank/Desktop/website/Gemini_Generated_Image_rou5kwrou5kwrou5.jpeg" alt="Product thumbnail 3">
+                        </div>
+                        <div class="product-thumbnail" data-image="../images/products/product-angle3.jpg">
+                            <img src="C:/Users/Mayank/Desktop/website/Gemini_Generated_Image_rou5kwrou5kwrou5.jpeg" alt="Product thumbnail 4">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Information -->
+                <div class="product-info-block">
+                    <span class="product-category" id="product-category">Product Category</span>
+                    <h1 id="product-name">Product Name</h1>
+                    <p class="product-seller">Sold By - <strong>Alert India No. 1, Aligarh, Uttar Pradesh</strong></p>
+
+                    <!-- Price Section -->
+                    <div class="product-price">
+                        <h2>₹ 1,200 <span>/piece</span></h2>
+                    </div>
+
+                    <div class="product-description">
+                        <p id="product-description">Detailed product description goes here. This would include information about what the product is, what it does, and why it's beneficial for the customer.</p>
+                    </div>
+
+                    <div class="product-features-list">
+                        <h3>Key Features</h3>
+                        <ul id="product-features">
+                            <li><i class="fas fa-check-circle"></i> Feature 1</li>
+                            <li><i class="fas fa-check-circle"></i> Feature 2</li>
+                            <li><i class="fas fa-check-circle"></i> Feature 3</li>
+                            <li><i class="fas fa-check-circle"></i> Feature 4</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="product-specs">
+                        <h3>Technical Specifications</h3>
+                        <table class="specs-table" id="product-specs">
+                            <tr>
+                                <td>Dimension</td>
+                                <td>100mm x 50mm x 20mm</td>
+                            </tr>
+                            <tr>
+                                <td>Weight</td>
+                                <td>500g</td>
+                            </tr>
+                            <tr>
+                                <td>Material</td>
+                                <td>Stainless Steel</td>
+                            </tr>
+                            <tr>
+                                <td>Warranty</td>
+                                <td>5 years</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <div class="product-actions">
+                        <a href="https://wa.me/919876543210?text=I'm%20interested%20in%20your%20product:%20Product%20Name" class="btn btn-primary" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Contact on WhatsApp
+                        </a>
+                        <a href="../contact.html" class="btn btn-secondary">
+                            <i class="fas fa-envelope"></i> Enquire Now
+                        </a>
+                        <a href="../brochures/product-brochure.pdf" class="btn btn-outline download-brochure" download>
+                            <i class="fas fa-file-pdf"></i> Download Brochure
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Related Products Section -->
+    <section class="related-products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Related Products</h2>
+                <p>You might also be interested in these products</p>
+            </div>
+            
+            <div class="related-products-grid" id="related-products">
+                <!-- Related products will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Button -->
+    <div class="whatsapp-button">
+        <a href="https://wa.me/919876543210" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="logo-text">
+                            <h3>AALART</h3>
+                            <p>INDIA NO. 1</p>
+                        </div>
+                    </div>
+                    <p>Aalart India's innovative lock solutions combine cutting-edge technology with traditional craftsmanship to provide unmatched security.</p>
+                    
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Security Road, Mumbai, Maharashtra, India - 400001</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+91 98765 43210</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@aalartindia.com</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="../about.html">About Us</a></li>
+                            <li><a href="../products.html">Products</a></li>
+                            <li><a href="../contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Products</h4>
+                        <ul>
+                            <li><a href="../products.html">Smart Locks</a></li>
+                            <li><a href="../products.html">Padlocks</a></li>
+                            <li><a href="../products.html">Mortise Handles</a></li>
+                            <li><a href="../products.html">Main Door Locks</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Customer Service</h4>
+                        <ul>
+                            <li><a href="#">Warranty Information</a></li>
+                            <li><a href="#">Installation Guide</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="../contact.html">Support</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                <p>© 2023 Aalart India No. 1. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Product Gallery Image Switcher
+        document.addEventListener('DOMContentLoaded', function() {
+            const mainImage = document.getElementById('main-product-image');
+            const thumbnails = document.querySelectorAll('.product-thumbnail');
+            
+            thumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener('click', function() {
+                    // Update main image
+                    mainImage.src = this.getAttribute('data-image');
+                    mainImage.alt = this.querySelector('img').alt;
+                    
+                    // Update active thumbnail
+                    thumbnails.forEach(thumb => thumb.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+            
+            // Load related products
+            loadRelatedProducts();
+        });
+        
+        // Function to load related products
+        function loadRelatedProducts() {
+            const relatedProductsContainer = document.getElementById('related-products');
+            
+            // Example related products - in a real implementation, this would be dynamic
+            const relatedProducts = [
+                {
+                    id: 'product1',
+                    name: 'Related Product 1',
+                    image: 'C:/Users/Mayank/Desktop/website/Gemini_Generated_Image_rou5kwrou5kwrou5.jpeg',
+                    category: 'Category',
+                    description: 'Brief description of the related product.',
+                    url: 'related-product1.html'
+                },
+                {
+                    id: 'product2',
+                    name: 'Related Product 2',
+                    image: 'C:/Users/Mayank/Desktop/website/Gemini_Generated_Image_rou5kwrou5kwrou5.jpeg',
+                    category: 'Category',
+                    description: 'Brief description of the related product.',
+                    url: 'related-product2.html'
+                },
+                {
+                    id: 'product3',
+                    name: 'Related Product 3',
+                    image: 'C:/Users/Mayank/Desktop/website/Gemini_Generated_Image_rou5kwrou5kwrou5.jpeg',
+                    category: 'Category',
+                    description: 'Brief description of the related product.',
+                    url: 'related-product3.html'
+                }
+            ];
+            
+            // Clear the container
+            relatedProductsContainer.innerHTML = '';
+            
+            // Create and append related product cards
+            relatedProducts.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card';
+                productCard.innerHTML = `
+                    <div class="product-image">
+                        <img src="${product.image}" alt="${product.name}">
+                    </div>
+                    <div class="product-info">
+                        <span class="category-label">${product.category}</span>
+                        <h3>${product.name}</h3>
+                        <p>${product.description}</p>
+                        <div class="product-cta">
+                            <a href="${product.url}" class="btn btn-secondary">View Details</a>
+                        </div>
+                    </div>
+                `;
+                relatedProductsContainer.appendChild(productCard);
+            });
+        }
+    </script>
+</body>
+</html>
