@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Aalart India's diverse range of lock solutions including godown locks, padlocks, mortise handles, and main door locks.">
+    <meta name="keywords" content="locks, security locks, Aalart Locks, best locks in India, high-security locks, door locks, shutter locks">
+    <meta name="author" content="Aalart Locks">
+    <meta name="robots" content="index, follow">
+    <title>Products - Aalart India No. 1</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* Products Page Specific Styles */
+        .products-hero {
+            background: linear-gradient(rgba(15, 76, 129, 0.8), rgba(15, 76, 129, 0.9)), url('Assets/Door Handle Lock/Door Handle Lock (2).jpg');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 150px 0 70px;
+            text-align: center;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+        
+        .breadcrumb a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            color: var(--white);
+        }
+        
+        .breadcrumb span {
+            margin: 0 0.5rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .products-container {
+            padding: 4rem 0;
+        }
+        
+        .products-layout {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .products-sidebar {
+            flex: 0 0 250px;
+        }
+        
+        .filter-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .filter-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .filter-group {
+            margin-bottom: 1rem;
+        }
+        
+        .filter-option {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.75rem;
+        }
+        
+        .filter-checkbox {
+            width: 18px;
+            height: 18px;
+            margin-right: 0.75rem;
+            accent-color: var(--primary);
+        }
+        
+        .filter-label {
+            font-size: 0.95rem;
+            cursor: pointer;
+        }
+        
+        .filter-count {
+            margin-left: auto;
+            font-size: 0.85rem;
+            background-color: var(--light-bg);
+            color: var(--text-light);
+            padding: 0.15rem 0.5rem;
+            border-radius: 10px;
+        }
+        
+        .filter-button {
+            width: 100%;
+            margin-top: 1rem;
+        }
+        
+        .products-grid {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .product-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background-color: white;
+            transition: var(--transition);
+        }
+        
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+        
+        .product-info {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .product-info h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .product-info p {
+            margin-bottom: 1.25rem;
+            font-size: 0.9rem;
+            flex-grow: 1;
+        }
+        
+        .product-features {
+            margin-bottom: 1.25rem;
+        }
+        
+        .product-features ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .product-features li {
+            display: flex;
+            align-items: center;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-light);
+        }
+        
+        .product-features li i {
+            color: var(--secondary);
+            margin-right: 0.5rem;
+        }
+        
+        .category-label {
+            display: inline-block;
+            background-color: rgba(15, 76, 129, 0.1);
+            color: var(--primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .product-cta {
+            margin-top: auto;
+        }
+        
+        /* Category Sections */
+        .category-section {
+            margin-bottom: 4rem;
+        }
+        
+        .category-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        
+        .category-header h2 {
+            color: var(--primary);
+            margin-bottom: 0;
+            margin-right: 1rem;
+        }
+        
+        .category-line {
+            flex-grow: 1;
+            height: 2px;
+            background-color: var(--border-color);
+        }
+        
+        /* Mobile View */
+        @media (max-width: 992px) {
+            .products-layout {
+                flex-direction: column;
+            }
+            
+            .products-sidebar {
+                flex: none;
+                width: 100%;
+            }
+            
+            .mobile-filter-toggle {
+                display: block;
+                width: 100%;
+                margin-bottom: 1.5rem;
+            }
+            
+            .filter-card {
+                display: none;
+            }
+            
+            .filter-card.show {
+                display: block;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <div class="logo-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>AALART</h1>
+                        <p>INDIA NO. 1</p>
+                    </div>
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <div class="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html" class="active">Products</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <!-- Products Hero Section -->
+    <section class="products-hero">
+        <div class="container">
+            <h1>Our Product Range</h1>
+            <p>Innovative security solutions for every need</p>
+            
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <a href="products.html" class="active">Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Container -->
+    <section class="products-container">
+        <div class="container">
+            <!-- Mobile Filter Toggle -->
+            <button class="btn btn-secondary mobile-filter-toggle" style="display: none;">
+                <i class="fas fa-filter"></i> Show Filters
+            </button>
+            
+            <div class="products-layout">
+                <!-- Sidebar Filters -->
+                <div class="products-sidebar">
+                    <div class="filter-card">
+                        <h3>Categories</h3>
+                        <div class="filter-group">
+                            <div class="filter-option">
+                                <input type="checkbox" id="all" class="filter-checkbox" checked data-category="all">
+                                <label for="all" class="filter-label">All Products</label>
+                                <span class="filter-count">13</span>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="godown-locks" class="filter-checkbox" data-category="godown-locks">
+                                <label for="godown-locks" class="filter-label">Godown Locks</label>
+                                <span class="filter-count">2</span>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="padlocks" class="filter-checkbox" data-category="padlocks">
+                                <label for="padlocks" class="filter-label">Padlocks</label>
+                                <span class="filter-count">3</span>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="mortise-handles" class="filter-checkbox" data-category="mortise-handles">
+                                <label for="mortise-handles" class="filter-label">Mortise Handles</label>
+                                <span class="filter-count">3</span>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="main-door-locks" class="filter-checkbox" data-category="main-door-locks">
+                                <label for="main-door-locks" class="filter-label">Main Door Locks</label>
+                                <span class="filter-count">1</span>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="shutter-locks" class="filter-checkbox" data-category="shutter-locks">
+                                <label for="shutter-locks" class="filter-label">Shutter Locks</label>
+                                <span class="filter-count">3</span>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="tool-box-locks" class="filter-checkbox" data-category="tool-box-locks">
+                                <label for="tool-box-locks" class="filter-label">Tool Box Locks</label>
+                                <span class="filter-count">1</span>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-primary filter-button" id="apply-filters">Apply Filters</button>
+                    </div>
+                </div>
+                
+                <!-- Products Grid -->
+                <div class="products-grid">
+                    <!-- Godown Locks -->
+                    <div class="product-card" data-category="godown-locks">
+                        <div class="product-image">
+                            <img src="Assets/SS Godown Lock/SS Godown Lock (3).jpg" alt="SS Godown Lock">
+                        </div>
+                        <div class="product-info">
+                            <span class="category-label">Godown Lock</span>
+                            <h3>SS Godown Lock</h3>
+                            <p>Advanced fingerprint recognition with mobile app control and activity log.</p>
+                            <div class="product-features">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> Fingerprint & PIN access</li>
+                                    <li><i class="fas fa-check-circle"></i> Smartphone control</li>
+                                    <li><i class="fas fa-check-circle"></i> Activity logs</li>
+                                </ul>
+                            </div>
+                            <div class="product-cta">
+                                <a href="product-pages/ss_godown_lock.html" class="btn btn-secondary">View</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card" data-category="godown-locks">
+                        <div class="product-image">
+                            <img src="Assets/Godown/A Alart Double Action Red Godown Lock (1).jpg" alt="Double Action Red Godown Lock">
+                        </div>
+                        <div class="product-info">
+                            <span class="category-label">Godown Lock</span>
+                            <h3>Double Action Red Godown Lock</h3>
+                            <p>Tamper-resistant keypad with multiple access codes and emergency bypass.</p>
+                            <div class="product-features">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> Multiple access codes</li>
+                                    <li><i class="fas fa-check-circle"></i> Low battery warning</li>
+                                    <li><i class="fas fa-check-circle"></i> Anti-tamper alarm</li>
+                                </ul>
+                            </div>
+                            <div class="product-cta">
+                                <a href="product-pages/double_action_red_godown_lock.html" class="btn btn-secondary">View</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!--<div class="product-card" data-category="godown-locks">
+                        <div class="product-image">
+                            <img src="C:/Users/Mayank/Desktop/website/Gemini_Generated_Image_rou5kwrou5kwrou5.jpeg" alt="Aalart WiFi Door Lock">
+                        </div>
+                        <div class="product-info">
+                            <span class="category-label">Godown Lock</span>
+                            <h3>Aalart WiFi Door Lock</h3>
+                            <p>Remote access and control from anywhere with advanced encryption security.</p>
+                            <div class="product-features">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> Remote access</li>
+                                    <li><i class="fas fa-check-circle"></i> Voice assistant integration</li>
+                                    <li><i class="fas fa-check-circle"></i> Bank-grade encryption</li>
+                                </ul>
+                            </div>
+                            <div class="product-cta">
+                                <a href="product-pages/godown.html" class="btn btn-secondary">Request Quote</a>
+                            </div>
+                        </div>
+                    </div>-->
+                    
+                    <!-- Padlocks -->
+                    <div class="product-card" data-category="padlocks">
+                        <div class="product-image">
+                            <img src="Assets/Kundan Round Padlock/Kundan Round Padlock (3).jpg" alt="Kundan Round Padlock">
+                        </div>
+                        <div class="product-info">
+                            <span class="category-label">Padlock</span>
+                            <h3>Kundan Round Padlock</h3>
+                            <p>Hardened steel construction with weather-resistant coating for maximum security.</p>
+                            <div class="product-features">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> 5-pin cylinder</li>
+                                    <li><i class="fas fa-check-circle"></i> Hardened steel shackle</li>
+                                    <li><i class="fas fa-check-circle"></i> Weather resistant</li>
+                                </ul>
+                            </div>
+                            <div class="product-cta">
+                                <a href="product-pages/Kundan_Round_Padlock.html" class="btn btn-secondary">View</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card" data-category="padlocks">
+                        <div class="product-image">
+                            <img src="Assets/Round Stainless Steel Padlock/Round Stainless Steel  Padlock.jpg" alt="Round Stainless Steel Padlock">
+                        </div>
+                        <div class="product-info">
+                            <span class="category-label">Padlock</span>
+                            <h3>Round Stainless Steel Padlock</h3>
+                            <p>Keyless convenience with customizable 4-digit combination and solid brass body.</p>
+                            <div class="product-features">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> 10,000 possible combinations</li>
+                                    <li><i class="fas fa-check-circle"></i> Solid brass construction</li>
+                                    <li><i class="fas fa-check-circle"></i> Resettable combination</li>
+                                </ul>
+                            </div>
+                            <div class="product-cta">
+                                <a href="product-pages/round_stainless_steel_padlock.html" class="btn btn-secondary">View</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!--<div class="product-card" data-category="padlocks">
+                        <div class="product-image">
+                            <img src="C:/Users/Mayank/Desktop/website/Gemini_Generated_Image_rou5kwrou5kwrou5.jpeg" alt="Aalart Shrouded Padlock">
+                        </div>
+                        <div class="product-info">
+                            <span class="category-label">Padlock</span>
+                            <h3>Aalart Shrouded Padlock</h3>
+                            <p>Extra protection with shrouded shackle design for high-risk security applications.</p>
+                            <div class="product-features">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> Shrouded shackle</li>
+                                    <li><i class="fas fa-check-circle"></i> Cut-resistant</li>
+                                    <li><i class="fas fa-check-circle"></i> Drill-protected cylinder</li>
+                                </ul>
+                            </div>
+                            <div class="product-cta">
+                                <a href="contact.html" class="btn btn-secondary">Request Quote</a>
+                            </div>
+                        </div>
+                    </div>-->
+                    
+                    <!-- Mortise Handles -->
+                    <div class="product-card" data-category="mortise-handles">
+                        <div class="product-image">
+                            <img src="Assets/Black Mortise Door Handles/Black Mortise  Door Handles.jpg" alt="Black Mortise Door Handles">
+                        </div>
+                        <div class="product-info">
+                            <span class="category-label">Mortise Handle</span>
+                            <h3>Black Mortise Door Handles</h3>
+                            <p>Elegant design with premium finish and smooth operation for residential doors.</p>
+                            <div class="product-features">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> Smooth operation</li>
+                                    <li><i class="fas fa-check-circle"></i> Multiple finishes available</li>
+                                    <li><i class="fas fa-check-circle"></i> 10-year warranty</li>
+                                </ul>
+                            </div>
+                            <div class="product-cta">
+                                <a href="product-pages/black_mortise_door_handle.html" class="btn btn-secondary">View</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card" data-category="mortise-handles">
+                        <div class="product-image">
+                            <img src="Assets/5inch SS Mortise Door Handle/5inch SS Mortise Door Handle.jpg" alt="5inch SS Mortise Door Handle">
+                        </div>
+                        <div class="product-info">
+                            <span class="category-label">Mortise Handle</span>
+                            <h3>5inch SS Mortise Door Handle</h3>
+                            <p>Heavy-duty commercial grade mortise handle with anti-thrust latch for high traffic areas.</p>
+                            <div class="product-features">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> Commercial grade</li>
+                                    <li><i class="fas fa-check-circle"></i> Anti-thrust latch</li>
+                                    <li><i class="fas fa-check-circle"></i> ADA compliant</li>
+                                </ul>
+                            </div>
+                            <div class="product-cta">
+                                <a href="product-pages/mortise_door_handle.html" class="btn btn-secondary">View</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card" data-category="mortise-handles">
+                        <div class="product-image">
+                            <img src="Assets/SS Mortise Product/SS Mortise Handle.jpg" alt="SS Mortise Door Handle">
+                        </div>
+                        <div class="product-info">
+                            <span class="category-label">Mortise Handle</span>
+                            <h3>SS Mortise Door Handle</h3>
+                            <p>Contemporary design with ergonomic grip and silent operation for luxury homes.</p>
+                            <div class="product-features">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> Designer finishes</li>
+                                    <li><i class="fas fa-check-circle"></i> Silent operation</li>
+                                    <li><i class="fas fa-check-circle"></i> Ergonomic design</li>
+                                </ul>
+                            </div>
+                            <div class="product-cta">
+                                <a href="product-pages/ss_mortise_door_handle.html" class="btn btn-secondary">View</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Shutter Locks -->
+                    <div class="product-card" data-category="shutter-locks">
+                        <div class="product-image">
+                            <img src="Assets/Door Shutter Side Lock/A Alart Door Shutter Side Lock.jpg" alt="A Alart Door Shutter Side Lock">
+                        </div>
+                        <div class="product-info">
+                            <span class="category-label">Shutter Lock</span>
+                            <h3>A Alart Door Shutter Side Lock</h3>
+                            <p>Advanced security with 5-point locking system for maximum protection.</p>
+                            <div class="product-features">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> 5-point locking</li>
+                                    <li><i class="fas fa-check-circle"></i> Anti-drill protection</li>
+                                    <li><i class="fas fa-check-circle"></i> Reinforced strike plate</li>
+                                </ul>
+                            </div>
+                            <div class="product-cta">
+                                <a href="product-pages/door_shutter_side_lock.html" class="btn btn-secondary">View</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card" data-category="shutter-locks">
+                        <div class="product-image">
+                            <img src="Assets/Central Shutter Lock/Central Shutter Lock.jpg" alt="Central Shutter Lock">
+                        </div>
+                        <div class="product-info">
+                            <span class="category-label">Shutter Lock</span>
+                            <h3>Central Shutter Lock</h3>
+                            <p>High-security deadbolt with hardened steel insert and anti-bump feature.</p>
+                            <div class="product-features">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> 1-inch throw bolt</li>
+                                    <li><i class="fas fa-check-circle"></i> Pick & bump resistant</li>
+                                    <li><i class="fas fa-check-circle"></i> Grade 1 security rating</li>
+                                </ul>
+                            </div>
+                            <div class="product-cta">
+                                <a href="product-pages/central_shutter_lock.html" class="btn btn-secondary">View</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card" data-category="shutter-locks">
+                        <div class="product-image">
+                            <img src="Assets/Center Door Shutter Side Lock/A Alart Center Door Shutter Side Lock (1).jpg" alt="A Alart Center Door Shutter Side Lock">
+                        </div>
+                        <div class="product-info">
+                            <span class="category-label">Shutter Lock</span>
+                            <h3>A Alart Center Door Shutter Side Lock</h3>
+                            <p>Complete door security solution with reinforced locking mechanism and emergency features.</p>
+                            <div class="product-features">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> Dual cylinder</li>
+                                    <li><i class="fas fa-check-circle"></i> Emergency escape feature</li>
+                                    <li><i class="fas fa-check-circle"></i> Anti-forced entry design</li>
+                                </ul>
+                            </div>
+                            <div class="product-cta">
+                                <a href="product-pages/center_door_shutter_side_lock.html" class="btn btn-secondary">View</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main Door Locks -->
+                    <div class="product-card" data-category="main-door-locks">
+                        <div class="product-image">
+                            <img src="Assets/Lock Fitting/Door Lock Fitting.jpg" alt="Door Lock Fitting">
+                        </div>
+                        <div class="product-info">
+                            <span class="category-label">Main Door Lock</span>
+                            <h3>Door Lock Fitting</h3>
+                            <p>Advanced security with 5-point locking system for maximum protection.</p>
+                            <div class="product-features">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> 5-point locking</li>
+                                    <li><i class="fas fa-check-circle"></i> Anti-drill protection</li>
+                                    <li><i class="fas fa-check-circle"></i> Reinforced strike plate</li>
+                                </ul>
+                            </div>
+                            <div class="product-cta">
+                                <a href="product-pages/door_lock_fitting.html" class="btn btn-secondary">View</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card" data-category="main-door-locks">
+                        <div class="product-image">
+                            <img src="C:/Users/Mayank/Desktop/website/Gemini_Generated_Image_rou5kwrou5kwrou5.jpeg" alt="Aalart Deadbolt System">
+                        </div>
+                        <div class="product-info">
+                            <span class="category-label">Main Door Lock</span>
+                            <h3>Aalart Deadbolt System</h3>
+                            <p>High-security deadbolt with hardened steel insert and anti-bump feature.</p>
+                            <div class="product-features">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> 1-inch throw bolt</li>
+                                    <li><i class="fas fa-check-circle"></i> Pick & bump resistant</li>
+                                    <li><i class="fas fa-check-circle"></i> Grade 1 security rating</li>
+                                </ul>
+                            </div>
+                            <div class="product-cta">
+                                <a href="contact.html" class="btn btn-secondary">Request Quote</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card" data-category="main-door-locks">
+                        <div class="product-image">
+                            <img src="images/product-main-door-3.jpg" alt="Aalart Security Door Lock">
+                        </div>
+                        <div class="product-info">
+                            <span class="category-label">Main Door Lock</span>
+                            <h3>Aalart Security Door Lock</h3>
+                            <p>Complete door security solution with reinforced locking mechanism and emergency features.</p>
+                            <div class="product-features">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> Dual cylinder</li>
+                                    <li><i class="fas fa-check-circle"></i> Emergency escape feature</li>
+                                    <li><i class="fas fa-check-circle"></i> Anti-forced entry design</li>
+                                </ul>
+                            </div>
+                            <div class="product-cta">
+                                <a href="contact.html" class="btn btn-secondary">View</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tool Box Locks -->
+                    <div class="product-card" data-category="tool-box-locks">
+                        <div class="product-image">
+                            <img src="Assets/Tool Box Lock/A Alart Bahuvali Box Locks (2).jpg" alt="Tool Box Lock">
+                        </div>
+                        <div class="product-info">
+                            <span class="category-label">Tool Box Lock</span>
+                            <h3>A Alart Bahuvali Box Locks</h3>
+                            <p>Advanced security with 5-point locking system for maximum protection.</p>
+                            <div class="product-features">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> 5-point locking</li>
+                                    <li><i class="fas fa-check-circle"></i> Anti-drill protection</li>
+                                    <li><i class="fas fa-check-circle"></i> Reinforced strike plate</li>
+                                </ul>
+                            </div>
+                            <div class="product-cta">
+                                <a href="product-pages/tool_box_lock.html" class="btn btn-secondary">View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Button -->
+    <div class="whatsapp-button">
+        <a href="https://wa.me/919XXXXXXXXX" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h3>AALART</h3>
+                        <p>INDIA NO. 1</p>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="products.html">Products</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Products</h4>
+                        <ul>
+                            <li><a href="products.html#godown-locks">Godown Locks</a></li>
+                            <li><a href="products.html#padlocks">Padlocks</a></li>
+                            <li><a href="products.html#mortise-handles">Mortise Handles</a></li>
+                            <li><a href="products.html#main-door-locks">Main Door Locks</a></li>
+                            <li><a href="products.html#shutter-locks">Shutter Locks</a></li>
+                            <li><a href="products.html#tool-box-locks">Shutter Locks</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Contact</h4>
+                        <ul class="contact-info">
+                            <li><i class="fas fa-map-marker-alt"></i> 123 Security Road, Mumbai, India</li>
+                            <li><i class="fas fa-phone"></i> +91 98XXXXXXXX</li>
+                            <li><i class="fas fa-envelope"></i> info@aalartindia.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <p>&copy; 2025 Aalart India No. 1. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Product Filtering
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterCheckboxes = document.querySelectorAll('.filter-checkbox');
+            const productCards = document.querySelectorAll('.product-card');
+            const applyFiltersButton = document.getElementById('apply-filters');
+            const mobileFilterToggle = document.querySelector('.mobile-filter-toggle');
+            const filterCard = document.querySelector('.filter-card');
+            
+            // Show mobile filter toggle on small screens
+            if (window.innerWidth <= 992) {
+                mobileFilterToggle.style.display = 'block';
+            }
+            
+            // Handle mobile filter toggle
+            if (mobileFilterToggle) {
+                mobileFilterToggle.addEventListener('click', function() {
+                    filterCard.classList.toggle('show');
+                    if (filterCard.classList.contains('show')) {
+                        mobileFilterToggle.innerHTML = '<i class="fas fa-times"></i> Hide Filters';
+                    } else {
+                        mobileFilterToggle.innerHTML = '<i class="fas fa-filter"></i> Show Filters';
+                    }
+                });
+            }
+            
+            // Handle window resize
+            window.addEventListener('resize', function() {
+                if (window.innerWidth <= 992) {
+                    mobileFilterToggle.style.display = 'block';
+                } else {
+                    mobileFilterToggle.style.display = 'none';
+                    filterCard.classList.remove('show');
+                }
+            });
+            
+            // Handle "All Products" checkbox
+            document.getElementById('all').addEventListener('change', function() {
+                if (this.checked) {
+                    filterCheckboxes.forEach(checkbox => {
+                        if (checkbox.id !== 'all') {
+                            checkbox.checked = false;
+                        }
+                    });
+                }
+            });
+            
+            // Handle category checkboxes
+            filterCheckboxes.forEach(checkbox => {
+                if (checkbox.id !== 'all') {
+                    checkbox.addEventListener('change', function() {
+                        if (this.checked) {
+                            document.getElementById('all').checked = false;
+                        }
+                        
+                        // If no checkboxes are checked, check "All Products"
+                        const anyChecked = Array.from(filterCheckboxes).some(cb => cb.checked && cb.id !== 'all');
+                        if (!anyChecked) {
+                            document.getElementById('all').checked = true;
+                        }
+                    });
+                }
+            });
+            
+            // Apply filters
+            applyFiltersButton.addEventListener('click', function() {
+                const selectedCategories = Array.from(filterCheckboxes)
+                    .filter(checkbox => checkbox.checked)
+                    .map(checkbox => checkbox.dataset.category);
+                
+                // If "All Products" is selected or no filters are selected, show all products
+                if (selectedCategories.includes('all') || selectedCategories.length === 0) {
+                    productCards.forEach(card => {
+                        card.style.display = 'block';
+                    });
+                } else {
+                    // Otherwise, filter by selected categories
+                    productCards.forEach(card => {
+                        if (selectedCategories.includes(card.dataset.category)) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                }
+                
+                // Close mobile filters if open
+                if (window.innerWidth <= 992 && filterCard.classList.contains('show')) {
+                    filterCard.classList.remove('show');
+                    mobileFilterToggle.innerHTML = '<i class="fas fa-filter"></i> Show Filters';
+                }
+                
+                // Scroll to top of products
+                document.querySelector('.products-grid').scrollIntoView({ behavior: 'smooth' });
+            });
+            
+            // URL hash navigation for categories
+            function handleHashChange() {
+                const hash = window.location.hash.substring(1);
+                if (hash && ['godown-locks', 'padlocks', 'mortise-handles', 'shutter-locks', 'main-door-locks','tool-box-locks'].includes(hash)) {
+                    // Uncheck all filters
+                    filterCheckboxes.forEach(checkbox => {
+                        checkbox.checked = checkbox.dataset.category === hash;
+                    });
+                    
+                    // Apply the filter
+                    applyFiltersButton.click();
+                }
+            }
+            
+            // Handle hash change on page load
+            if (window.location.hash) {
+                handleHashChange();
+            }
+            
+            // Handle hash change during navigation
+            window.addEventListener('hashchange', handleHashChange);
+        });
+    </script>
+</body>
+</html>

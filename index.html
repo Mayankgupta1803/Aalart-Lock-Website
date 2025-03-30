@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="s-FFnHxgJGEjkWNBf_UM0YujXfh1RWZh-BOhPkuJifc" />
+    <meta name="description" content="Aalart India No. 1 - Leading manufacturer of innovative lock solutions since 1975. Smart locks, padlocks, mortise handles and main door locks.">
+    <meta name="keywords" content="locks, security locks, Aalart Locks, best locks in India, high-security locks, door locks, shutter locks">
+    <meta name="author" content="Aalart Locks">
+    <meta name="robots" content="index, follow">
+    <title>Aalart India No. 1 - Premium Lock Solutions</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/product_slider.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* Hero Section */
+        /*.hero {
+            background: linear-gradient(rgba(5, 45, 86, 0.8), rgba(5, 45, 86, 0.9)), url('C:/Users/Mayank/Desktop/website/Gemini_Generated_Image_rou5kwrou5kwrou5.jpeg');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 200px 0 100px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }*/
+        
+        /* Features Section */
+        .features {
+            padding: 5rem 0;
+            background-color: var(--white);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-header h2 {
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary);
+        }
+        
+        .section-header p {
+            max-width: 700px;
+            margin: 1rem auto 0;
+            color: var(--text-light);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background-color: rgba(15, 76, 129, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .feature-icon i {
+            font-size: 32px;
+            color: var(--primary);
+        }
+        
+        .feature-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Categories Section */
+        .categories {
+            padding: 5rem 0;
+            background-color: var(--light-bg);
+        }
+        
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .category-card {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            height: 300px;
+            transition: var(--transition);
+            /*border: 2px solid red !important;*/
+            min-width: 300px; /* Ensures it doesn’t become too small */
+            flex: 1  /* Makes sure it takes space */
+        }
+        
+        .category-card:hover {
+            transform: scale(1.03);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .category-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        
+        .category-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+            min-height: 100%;
+        }
+        
+        .category-card:hover .category-image img {
+            transform: scale(1.1);
+        }
+        
+        .category-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(5, 45, 86, 0.9), rgba(5, 45, 86, 0.2));
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 1.5rem;
+            transition: var(--transition);
+        }
+        
+        .category-card:hover .category-overlay {
+            background: linear-gradient(to top, rgba(5, 45, 86, 0.95), rgba(5, 45, 86, 0.4));
+        }
+        
+        .category-overlay h3 {
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+        
+        .category-overlay p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .category-link {
+            font-weight: 500;
+            color: var(--white);
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .category-link i {
+            margin-left: 0.5rem;
+            transition: var(--transition);
+        }
+        
+        .category-link:hover i {
+            transform: translateX(5px);
+        }
+        @media (max-width: 600px) {
+            .categories-grid {
+                grid-template-columns: 1fr; /* Makes it 1 column */
+            }
+        }
+        /* About Section */
+        .about {
+            padding: 5rem 0;
+            background-color: var(--white);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .about-image {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .about-image img {
+            width: 100%;
+            display: block;
+        }
+        
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 3px solid var(--secondary);
+            border-radius: 8px;
+            z-index: -1;
+        }
+        
+        .about-text h2 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .about-text h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary);
+        }
+        
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+        }
+        
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            padding: 5rem 0;
+            background-color: var(--light-bg);
+        }
+        
+        .testimonials-slider {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .testimonial {
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            padding: 2rem;
+            text-align: center;
+            display: none;
+        }
+        
+        .testimonial.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .testimonial-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            overflow: hidden;
+            border: 5px solid rgba(15, 76, 129, 0.1);
+        }
+        
+        .testimonial-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        .testimonial-text::before,
+        .testimonial-text::after {
+            content: '"';
+            font-size: 3rem;
+            color: rgba(15, 76, 129, 0.1);
+            position: absolute;
+            line-height: 1;
+        }
+        
+        .testimonial-text::before {
+            top: -20px;
+            left: 0;
+        }
+        
+        .testimonial-text::after {
+            bottom: -40px;
+            right: 0;
+        }
+        
+        .testimonial-name {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.25rem;
+        }
+        
+        .testimonial-position {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+        
+        .testimonial-indicators {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+        
+        .testimonial-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(15, 76, 129, 0.2);
+            margin: 0 5px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .testimonial-indicator.active {
+            background-color: var(--primary);
+        }
+        
+        /* CTA Section */
+        .cta {
+            padding: 5rem 0;
+            background: linear-gradient(rgba(15, 76, 129, 0.9), rgba(15, 76, 129, 0.9)), url('C:/Users/Mayank/Desktop/website/Gemini_Generated_Image_rou5kwrou5kwrou5.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero {
+                padding: 180px 0 80px;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .about-image {
+                order: 2;
+            }
+            
+            .about-text {
+                order: 1;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                padding: 150px 0 70px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: center;
+            }
+            
+            .feature-card, .category-card {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+            
+            .about-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .cta h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .about-stats {
+                grid-template-columns: 1fr;
+            }
+            .categories-grid {
+                grid-template-columns: 1fr; /* Ensures a single column layout on very small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <div class="logo-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>AALART</h1>
+                        <p>INDIA NO. 1</p>
+                    </div>
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <div class="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav">
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <!--<section class="hero">
+        <div class="container">
+            <h1>Securing Homes & Businesses Since 1975</h1>
+            <p>Aalart India's innovative lock solutions combine cutting-edge technology with traditional craftsmanship to provide unmatched security for your precious assets.</p>
+            
+            <div class="hero-buttons">
+                <a href="products.html" class="btn btn-secondary btn-lg">Explore Products</a>
+                <a href="contact.html" class="btn btn-outline btn-lg">Request Quote</a>
+            </div>
+        </div>
+    </section>-->
+    <!-- Hero Section with Slider -->
+    <!--<section class="hero">
+        <div class="hero-slider">
+            <div class="hero-slide active">
+                <div class="hero-content">
+                    <h1>Smart Lock Solutions</h1>
+                    <p>Aalart provides innovative and reliable security products for homes and businesses</p>
+                    <a href="products.html" class="btn">Explore Products</a>
+                </div>
+                <div class="hero-bg" style="background-color: var(--primary);"></div>
+            </div>
+            <div class="hero-slide">
+                <div class="hero-content">
+                    <h1>Advanced Security</h1>
+                    <p>Cutting-edge technology for superior protection and peace of mind</p>
+                    <a href="products.html" class="btn">View Range</a>
+                </div>
+                <div class="hero-bg" style="background-color: #004080;"></div>
+            </div>
+            <div class="hero-slide">
+                <div class="hero-content">
+                    <h1>Professional Installation</h1>
+                    <p>Expert advice and installation services nationwide</p>
+                    <a href="static/contact.html" class="btn">Contact Us</a>
+                </div>
+                <div class="hero-bg" style="background-color: #005599;"></div>
+            </div>
+            <div class="hero-indicators">
+                <div class="hero-indicator active"></div>
+                <div class="hero-indicator"></div>
+                <div class="hero-indicator"></div>
+            </div>
+        </div>
+    </section>-->
+    <section class="hero">
+        <div class="hero-slider">
+            <div class="hero-slide active" style="background-image: url('Assets/Door Handle Lock/Door Handle Lock.jpg');">
+                <div class="hero-content">
+                    <h1>Smart Lock Solutions</h1>
+                    <p>Aalart provides innovative and reliable security products for homes and businesses</p>
+                    <a href="products.html" class="btn">Explore Products</a>
+                </div>
+            </div>
+            <div class="hero-slide" style="background-image: url('C:/Users/Mayank/Desktop/website/Gemini_Generated_Image_rou5kwrou5kwrou5.jpeg');">
+                <div class="hero-content">
+                    <h1>Advanced Security</h1>
+                    <p>Cutting-edge technology for superior protection and peace of mind</p>
+                    <a href="products.html" class="btn">View Range</a>
+                </div>
+            </div>
+            <div class="hero-slide" style="background-image: url('Assets/Door Handle Lock/Door Handle Lock (1).jpg');">
+                <div class="hero-content">
+                    <h1>Professional Installation</h1>
+                    <p>Expert advice and installation services nationwide</p>
+                    <a href="static/contact.html" class="btn">Contact Us</a>
+                </div>
+            </div>
+            <div class="hero-indicators">
+                <div class="hero-indicator active"></div>
+                <div class="hero-indicator"></div>
+                <div class="hero-indicator"></div>
+            </div>
+        </div>
+    </section>
+    <!-- Product Slider Section -->
+    
+    <!-- Product Slider Section -->
+
+
+     <!-- Products Slider -->
+    
+     <div class="products-slider">
+        <div class="products-slider-container">
+            <div class="products-slider-track">
+                <!-- Product Slide 1 -->
+                <div class="product-slide">
+                    <a href="/product-pages/smart-lock-a100.html" class="product-link">
+                        <div class="product-card">
+                            <div class="product-img">
+                                <img src="Assets/Door Handle Lock/Door Handle Lock (1).jpg" alt="Smart Lock A100">
+                            </div>
+                            <div class="product-info">
+                                <h3>Smart Lock A100</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Product Slide 2 -->
+                <div class="product-slide">
+                    <a href="/product-pages/deadbolt-b200.html" class="product-link">
+                        <div class="product-card">
+                            <div class="product-img">
+                                <img src="Assets/Door Handle Lock/Door Handle Lock (1).jpg" alt="Deadbolt B200">
+                            </div>
+                            <div class="product-info">
+                                <h3>Deadbolt B200</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Product Slide 3 -->
+                <div class="product-slide">
+                    <a href="/product-pages/door-handle-c300.html" class="product-link">
+                        <div class="product-card">
+                            <div class="product-img">
+                                <img src="Assets/Door Handle Lock/Door Handle Lock (1).jpg" alt="Door Handle C300">
+                            </div>
+                            <div class="product-info">
+                                <h3>Door Handle C300</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Product Slide 4 - Different aspect ratio (square) -->
+                <div class="product-slide">
+                    <a href="/product-pages/padlock-d400.html" class="product-link">
+                        <div class="product-card">
+                            <div class="product-img">
+                                <img src="Assets/Door Handle Lock/Door Handle Lock (1).jpg" alt="Padlock D400">
+                            </div>
+                            <div class="product-info">
+                                <h3>Padlock D400</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Product Slide 4 - Different aspect ratio (square) -->
+                <div class="product-slide">
+                    <a href="/product-pages/padlock-d400.html" class="product-link">
+                        <div class="product-card">
+                            <div class="product-img">
+                                <img src="Assets/Door Handle Lock/Door Handle Lock (1).jpg" alt="Padlock D400">
+                            </div>
+                            <div class="product-info">
+                                <h3>Padlock D400</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Product Slide 4 - Different aspect ratio (square) -->
+                <div class="product-slide">
+                    <a href="/product-pages/padlock-d400.html" class="product-link">
+                        <div class="product-card">
+                            <div class="product-img">
+                                <img src="Assets/Door Handle Lock/Door Handle Lock (1).jpg" alt="Padlock D400">
+                            </div>
+                            <div class="product-info">
+                                <h3>Padlock D400</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Product Slide 5 - Very tall image -->
+                <div class="product-slide">
+                    <a href="/product-pages/security-camera.html" class="product-link">
+                        <div class="product-card">
+                            <div class="product-img">
+                                <img src="Assets/Black Mortise Door Handles/Black Mortise  Door Handles.jpg" alt="Security Camera">
+                            </div>
+                            <div class="product-info">
+                                <h3>Security Camera</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Product Slide 6 -->
+                <div class="product-slide">
+                    <a href="/product-pages/smart-hub.html" class="product-link">
+                        <div class="product-card">
+                            <div class="product-img">
+                                <img src="https://via.placeholder.com/400x300?text=Smart+Hub" alt="Smart Hub">
+                            </div>
+                            <div class="product-info">
+                                <h3>Smart Hub</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Slider Navigation Buttons -->
+            <button class="slider-nav slider-prev" aria-label="Previous product">&#10094;</button>
+            <button class="slider-nav slider-next" aria-label="Next product">&#10095;</button>
+        </div>
+    </div>
+
+
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Aalart?</h2>
+                <p>We offer cutting-edge security solutions backed by decades of expertise and commitment to excellence.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Supreme Security</h3>
+                    <p>Our advanced locking mechanisms provide uncompromised security for your homes and businesses, giving you peace of mind.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Precision Engineering</h3>
+                    <p>Every product is crafted with meticulous attention to detail, ensuring smooth operation and long-lasting durability.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Smart Technology</h3>
+                    <p>Embrace the future with our range of smart locks featuring biometric access, remote control, and real-time monitoring.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>After-Sales Support</h3>
+                    <p>Our customer service team is always ready to assist you with installation, maintenance, or any security concerns.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Quality Certification</h3>
+                    <p>All our products meet international security standards and come with quality certification for assured performance.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-thumbs-up"></i>
+                    </div>
+                    <h3>Customer Trust</h3>
+                    <p>With over a million satisfied customers across India, we've built a reputation for reliability and excellence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Product Categories</h2>
+                <p>Explore our diverse range of premium lock solutions designed for different security needs.</p>
+            </div>
+            
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="C:/Users/Mayank/Desktop/website/Gemini_Generated_Image_rou5kwrou5kwrou5.jpeg" alt="Smart Locks">
+                    </div>
+                    <div class="category-overlay">
+                        <h3>Godown Locks</h3>
+                        <p>Cutting-edge locks with biometric access, mobile apps, and activity monitoring.</p>
+                        <a href="products.html#godown-locks" class="category-link">Explore Range <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="C:/Users/Mayank/Desktop/website/Gemini_Generated_Image_rou5kwrou5kwrou5.jpeg" alt="Padlocks">
+                    </div>
+                    <div class="category-overlay">
+                        <h3>Padlocks</h3>
+                        <p>Heavy-duty padlocks for outdoor storage, gates, and high-security applications.</p>
+                        <a href="products.html#padlocks" class="category-link">Explore Range <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="C:/Users/Mayank/Desktop/website/Gemini_Generated_Image_rou5kwrou5kwrou5.jpeg" alt="Mortise Handles">
+                    </div>
+                    <div class="category-overlay">
+                        <h3>Mortise Handles</h3>
+                        <p>Elegant door handles with secure mortise locking mechanisms for interior doors.</p>
+                        <a href="products.html#mortise-handles" class="category-link">Explore Range <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="Assets/Door Handle Lock/Door Handle Lock.jpg" alt="Main Door Locks">
+                    </div>
+                    <div class="category-overlay">
+                        <h3>Main Door Locks</h3>
+                        <p>Premium multi-point locking systems for maximum security at entry points.</p>
+                        <a href="products.html#main-door-locks" class="category-link">Explore Range <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="C:/Users/Mayank/Desktop/website/Gemini_Generated_Image_rou5kwrou5kwrou5.jpeg" alt="Main Door Locks">
+                    </div>
+                    <div class="category-overlay">
+                        <h3>Main Door Locks</h3>
+                        <p>Premium multi-point locking systems for maximum security at entry points.</p>
+                        <a href="products.html#main-door-locks" class="category-link">Explore Range <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="C:/Users/Mayank/Desktop/website/Gemini_Generated_Image_rou5kwrou5kwrou5.jpeg" alt="Aalart Factory">
+                </div>
+                
+                <div class="about-text">
+                    <h2>Trusted by Millions Since 1975</h2>
+                    <p>Aalart India has been at the forefront of the lock manufacturing industry for over 45 years. What started as a small workshop has grown into one of India's leading security solution providers.</p>
+                    <p>Our state-of-the-art manufacturing facilities combine traditional craftsmanship with modern technology to produce locks that stand the test of time and provide unmatched security.</p>
+                    
+                    <div class="about-stats">
+                        <div class="stat">
+                            <div class="stat-value">45+</div>
+                            <div class="stat-label">Years of Excellence</div>
+                        </div>
+                        
+                        <div class="stat">
+                            <div class="stat-value">1M+</div>
+                            <div class="stat-label">Happy Customers</div>
+                        </div>
+                        
+                        <div class="stat">
+                            <div class="stat-value">100+</div>
+                            <div class="stat-label">Product Variants</div>
+                        </div>
+                        
+                        <div class="stat">
+                            <div class="stat-value">50+</div>
+                            <div class="stat-label">Cities Covered</div>
+                        </div>
+                    </div>
+                    
+                    <a href="about.html" class="btn btn-primary" style="margin-top: 2rem;">Learn More About Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Customers Say</h2>
+                <p>Hear from our satisfied customers who have experienced the Aalart difference.</p>
+            </div>
+            
+            <div class="testimonials-slider">
+                <div class="testimonial active">
+                    <div class="testimonial-image">
+                        <img src="C:/Users/Mayank/Desktop/website/Gemini_Generated_Image_rou5kwrou5kwrou5.jpeg" alt="Rajesh Kumar">
+                    </div>
+                    <div class="testimonial-text">
+                        <p>We installed Aalart smart locks in our new office building and couldn't be happier with the security and convenience they provide. The mobile app makes access management incredibly easy.</p>
+                    </div>
+                    <div class="testimonial-name">Rajesh Kumar</div>
+                    <div class="testimonial-position">Business Owner, Mumbai</div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-image">
+                        <img src="C:/Users/Mayank/Desktop/website/Gemini_Generated_Image_rou5kwrou5kwrou5.jpeg" alt="Priya Sharma">
+                    </div>
+                    <div class="testimonial-text">
+                        <p>After a break-in attempt at our neighbor's house, we upgraded to Aalart's multi-point door locks. The quality and sturdiness give us great peace of mind, especially when we're away from home.</p>
+                    </div>
+                    <div class="testimonial-name">Priya Sharma</div>
+                    <div class="testimonial-position">Homeowner, Delhi</div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-image">
+                        <img src="C:/Users/Mayank/Desktop/website/Gemini_Generated_Image_rou5kwrou5kwrou5.jpeg" alt="Amit Patel">
+                    </div>
+                    <div class="testimonial-text">
+                        <p>As a hotel manager, security and reliability are paramount. Aalart's mortise handle systems have proven to be stylish, durable, and maintenance-free across our 50+ rooms over the last five years.</p>
+                    </div>
+                    <div class="testimonial-name">Amit Patel</div>
+                    <div class="testimonial-position">Hotel Manager, Bangalore</div>
+                </div>
+                
+                <div class="testimonial-indicators">
+                    <span class="testimonial-indicator active"></span>
+                    <span class="testimonial-indicator"></span>
+                    <span class="testimonial-indicator"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Upgrade Your Security?</h2>
+            <p>Contact our experts today to find the perfect security solution for your specific needs. We offer free consultations and product demonstrations.</p>
+            <a href="contact.html" class="btn btn-secondary btn-lg">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- WhatsApp Button -->
+    <div class="whatsapp-button">
+        <a href="https://wa.me/919XXXXXXXXX" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h3>AALART</h3>
+                        <p>INDIA NO. 1</p>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="products.html">Products</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Products</h4>
+                        <ul>
+                            <li><a href="products.html#smart-locks">Smart Locks</a></li>
+                            <li><a href="products.html#padlocks">Padlocks</a></li>
+                            <li><a href="products.html#mortise-handles">Mortise Handles</a></li>
+                            <li><a href="products.html#main-door-locks">Main Door Locks</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Contact</h4>
+                        <ul class="contact-info">
+                            <li><i class="fas fa-map-marker-alt"></i> 123 Security Road, Mumbai, India</li>
+                            <li><i class="fas fa-phone"></i> +91 98XXXXXXXX</li>
+                            <li><i class="fas fa-envelope"></i> info@aalartindia.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <p>&copy; 2025 Aalart India No. 1. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/product_slider.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/main.js"></script>  
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const track = document.querySelector(".products-slider-track");
+            const slides = document.querySelectorAll(".product-slide");
+            const prevButton = document.querySelector(".slider-prev");
+            const nextButton = document.querySelector(".slider-next");
+            let currentIndex = 0;
+        
+            function updateSlider() {
+                const slideWidth = slides[0].getBoundingClientRect().width + 20; // Include margin
+                track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+                
+                // Disable buttons at edges
+                prevButton.disabled = currentIndex === 0;
+                nextButton.disabled = currentIndex >= slides.length - getSlidesPerView();
+            }
+        
+            function getSlidesPerView() {
+                if (window.innerWidth > 992) return 3; // Desktop
+                if (window.innerWidth > 576) return 2; // Tablet
+                return 1; // Mobile
+            }
+        
+            nextButton.addEventListener("click", () => {
+                if (currentIndex < slides.length - getSlidesPerView()) {
+                    currentIndex++;
+                    updateSlider();
+                }
+            });
+        
+            prevButton.addEventListener("click", () => {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    updateSlider();
+                }
+            });
+        
+            window.addEventListener("resize", updateSlider);
+            updateSlider(); // Initial call
+        });
+        </script> -->
+</body>
+</html>

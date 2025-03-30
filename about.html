@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Aalart India No. 1, a leading lock manufacturer since 1975. Discover our journey, values, and commitment to security excellence.Explore premium door locks, shutter locks, and more.">
+    <meta name="keywords" content="locks, security locks, Aalart Locks, best locks in India, high-security locks, door locks, shutter locks">
+    <meta name="author" content="Aalart Locks">
+    <meta name="robots" content="index, follow">
+    <title>About Us - Aalart India No. 1</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* About Page Specific Styles */
+        .about-hero {
+            background: linear-gradient(rgba(15, 76, 129, 0.8), rgba(15, 76, 129, 0.9)), url('Assets/Door Handle Lock/Door Handle Lock (2).jpg') !important;
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 150px 0 70px;
+            text-align: center;
+            opacity: 1;
+        }
+        .container h1 {
+            color: var(--white) !important
+        }
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+        
+        .breadcrumb a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            color: var(--white);
+        }
+        
+        .breadcrumb span {
+            margin: 0 0.5rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .about-section {
+            padding: 5rem 0;
+        }
+        
+        .about-section:nth-child(even) {
+            background-color: var(--light-bg);
+        }
+        
+        .about-section:nth-child(odd) {
+            background-color: var(--white);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-header h2 {
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary);
+        }
+        
+        .section-header p {
+            max-width: 700px;
+            margin: 1rem auto 0;
+            color: var(--text-light);
+        }
+        
+        /* Our Story Section */
+        .story-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .story-image {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .story-image img {
+            width: 100%;
+            display: block;
+        }
+        
+        .story-text h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .story-text p {
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+        }
+        
+        .story-text ul {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+        
+        .story-text ul li {
+            margin-bottom: 0.75rem;
+            color: var(--text-light);
+            position: relative;
+            list-style-type: none;
+        }
+        
+        .story-text ul li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            color: var(--secondary);
+            position: absolute;
+            left: -1.5rem;
+            top: 0.25rem;
+        }
+        
+        /* Timeline Section */
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: rgba(15, 76, 129, 0.1);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+        
+        .timeline-item {
+            padding: 0 3rem 3rem;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            text-align: left;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: var(--white);
+            border: 4px solid var(--primary);
+            border-radius: 50%;
+            top: 0;
+            right: -14px;
+            z-index: 1;
+        }
+        
+        .timeline-item:nth-child(even)::after {
+            left: -14px;
+            right: auto;
+        }
+        
+        .timeline-content {
+            padding: 1.5rem;
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+        
+        .timeline-content::after {
+            content: '';
+            position: absolute;
+            border: 10px solid transparent;
+            top: 10px;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content::after {
+            border-left-color: var(--white);
+            right: -20px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content::after {
+            border-right-color: var(--white);
+            left: -20px;
+        }
+        
+        .timeline-year {
+            display: inline-block;
+            padding: 0.25rem 1rem;
+            background-color: var(--primary);
+            color: var(--white);
+            border-radius: 20px;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .timeline-content h3 {
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+        }
+        
+        .timeline-content p {
+            color: var(--text-light);
+            margin-bottom: 0;
+        }
+        
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .team-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .team-image {
+            height: 280px;
+            overflow: hidden;
+        }
+        
+        .team-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .team-card:hover .team-image img {
+            transform: scale(1.05);
+        }
+        
+        .team-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .team-info h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .team-position {
+            color: var(--secondary);
+            font-weight: 500;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .team-bio {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .team-social {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        
+        .team-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            background-color: rgba(15, 76, 129, 0.1);
+            color: var(--primary);
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+        
+        .team-social a:hover {
+            background-color: var(--primary);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+        
+        /* Values Section */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .value-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .value-icon {
+            width: 70px;
+            height: 70px;
+            background-color: rgba(15, 76, 129, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .value-icon i {
+            font-size: 28px;
+            color: var(--primary);
+        }
+        
+        .value-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .value-card p {
+            color: var(--text-light);
+            margin-bottom: 0;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .story-content, 
+            .mission-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .story-image, 
+            .mission-image {
+                order: 2;
+            }
+            
+            .story-text, 
+            .mission-text {
+                order: 1;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 0;
+                left: 0;
+                text-align: left;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .timeline-item::after,
+            .timeline-item:nth-child(even)::after {
+                left: 20px;
+                right: auto;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-content::after {
+                border-right-color: var(--white);
+                border-left-color: transparent;
+                left: -20px;
+                right: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <div class="logo-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>AALART</h1>
+                        <p>INDIA NO. 1</p>
+                    </div>
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About Us</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <div class="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <!-- About Hero Section -->
+    <section class="about-hero" style="background-image: url('Assets/Door Handle Lock/Door Handle Lock.jpg');">
+        <div class="container">
+            <h1>About Aalart India</h1>
+            <p>Discover our journey of securing homes and businesses since 1975</p>
+            
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <a href="about.html" class="active">About Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Story</h2>
+                <p>The journey from a small workshop to India's leading lock Supplier</p>
+            </div>
+            
+            <div class="story-content">
+                <div class="story-image">
+                    <img src="C:/Users/Mayank/Desktop/website/Gemini_Generated_Image_rou5kwrou5kwrou5.jpeg" alt="Aalart Factory">
+                </div>
+                
+                <div class="story-text">
+                    <h3>Securing Homes & Businesses with Quality Locks </h3>
+                    <p><b>Aalart Locks</b> is a trusted name in the security industry, proudly manufactured by <b>Aalart India No. 1</b>. With over 50 years of expertise in lock manufacturing, we are committed to delivering high-security Mortise Locks, Door Locks, Shutter Locks, and more—ensuring the safety of homes, offices, and commercial establishments across India. While officially registered in 2017, our legacy of craftsmanship and innovation has been built over decades.</p>
+                    <p>With a 50-year heritage in the lock industry, Aalart India No. 1 has established itself as a leading manufacturer, retailer, and wholesaler. Under the visionary leadership of Atal Gupta (Proprietor), we continue to expand our reach, supplying premium security solutions nationwide.</p>
+                    <p>Why Choose Aalart Locks?</p>
+                    <ul>
+                        <li>Decades of Expertise – Over 50 years of manufacturing excellence.</li>
+                        <li>High-Quality Security Locks – Durable, reliable, and designed for maximum protection.</li>
+                        <li>Nationwide Distribution – Supplying top-grade locks across India.</li>
+                        <li>Retail & Wholesale – Catering to both individual buyers and bulk purchasers.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Journey</h2>
+                <p>Key milestones in our path to becoming India's No. 1 lock manufacturer</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-year">1975</span>
+                        <h3>Foundation</h3>
+                        <p>Aalart India was founded as a small workshop in Mumbai by Mr. Rajendra Kumar, focusing on repairing and crafting basic padlocks.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-year">1982</span>
+                        <h3>First Factory</h3>
+                        <p>Established our first formal manufacturing unit with 25 employees, introducing standardized production processes.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-year">1995</span>
+                        <h3>Modernization</h3>
+                        <p>Implemented computerized production processes and expanded product range to include mortise handles and door closers.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-year">2003</span>
+                        <h3>Quality Certification</h3>
+                        <p>Received ISO 9001 certification for quality management systems and opened our second manufacturing facility.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-year">2010</span>
+                        <h3>Digital Innovation</h3>
+                        <p>Launched our smart lock division, combining traditional craftsmanship with cutting-edge digital technology.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-year">2015</span>
+                        <h3>Going Global</h3>
+                        <p>Expanded to international markets in the Middle East, Southeast Asia, and Africa, bringing Indian security expertise to the world.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-year">2020</span>
+                        <h3>Modern Era</h3>
+                        <p>Established a dedicated Research & Development center for developing next-generation security solutions for smart homes and businesses.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-year">Today</span>
+                        <h3>India's No. 1</h3>
+                        <p>Continuing our legacy of excellence with a nationwide network of dealers and service centers, securing millions of properties across India.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Values Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Core Values – Commitment to Security & Quality</h2>
+                <p>At Aalart Locks, we uphold the highest standards of security, durability, and innovation to safeguard homes, businesses, and industries across India.</p>
+            </div>
+    
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Uncompromised Security & Protection</h3>
+                    <p>Our high-security locks are designed to provide superior protection, ensuring safety for residential, commercial, and industrial spaces.</p>
+                </div>
+    
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Premium Quality & Durability</h3>
+                    <p>With 50 years of expertise in lock manufacturing, we use top-grade materials and advanced engineering for long-lasting security solutions.</p>
+                </div>
+    
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Innovative Locking Solutions</h3>
+                    <p>We continuously integrate cutting-edge technology and modern design to enhance security, reliability, and ease of use.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Leadership Team Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Leadership Team</h2>
+                <p>Meet the experienced professionals who drive our vision and operations</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="images/Image.png" alt="Aman Kumar">
+                    </div>
+                    <div class="team-info">
+                        <h3>Aman Kumar</h3>
+                        <div class="team-position">Owner</div>
+                        <p class="team-bio">With over 25 years of experience in the security industry, Aman leads our company with strategic vision and a deep commitment to innovation.</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- <div class="team-card">
+                    <div class="team-image">
+                        <img src="images/img.png" alt="Priya Sharma">
+                    </div>
+                    <div class="team-info">
+                        <h3>Priya Sharma</h3>
+                        <div class="team-position">Chief Technology Officer</div>
+                        <p class="team-bio">Priya heads our R&D division, bringing expertise in smart security systems and a passion for integrating cutting-edge technologies.</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div> -->
+                
+                <!-- <div class="team-card">
+                    <div class="team-image">
+                        <img src="images/Image.png" alt="Vikram Patel">
+                    </div>
+                    <div class="team-info">
+                        <h3>Vikram Patel</h3>
+                        <div class="team-position">Production Director</div>
+                        <p class="team-bio">Vikram oversees our manufacturing operations, ensuring efficiency, quality control, and adherence to international standards.</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="images/img.png" alt="Neha Singh">
+                    </div>
+                    <div class="team-info">
+                        <h3>Neha Singh</h3>
+                        <div class="team-position">Head of Marketing</div>
+                        <p class="team-bio">Neha leads our marketing initiatives with creative strategies that have significantly strengthened our brand presence across India.</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Button -->
+    <div class="whatsapp-button">
+        <a href="https://wa.me/919XXXXXXXXX" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h3>AALART</h3>
+                        <p>INDIA NO. 1</p>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="products.html">Products</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Products</h4>
+                        <ul>
+                            <li><a href="products.html#smart-locks">Smart Locks</a></li>
+                            <li><a href="products.html#padlocks">Padlocks</a></li>
+                            <li><a href="products.html#mortise-handles">Mortise Handles</a></li>
+                            <li><a href="products.html#main-door-locks">Main Door Locks</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Contact</h4>
+                        <ul class="contact-info">
+                            <li><i class="fas fa-map-marker-alt"></i> 123 Security Road, Mumbai, India</li>
+                            <li><i class="fas fa-phone"></i> +91 98XXXXXXXX</li>
+                            <li><i class="fas fa-envelope"></i> info@aalartindia.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <p>&copy; 2025 Aalart India No. 1. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
