@@ -18,7 +18,7 @@
   }
   
   /* Button Styles */
-  .btn {
+  .btn1 {
     display: inline-block;
     padding: 8px 15px;
     background-color: var(--accent);
@@ -31,7 +31,7 @@
     transition: var(--transition);
   }
   
-  .btn:hover {
+  .btn1:hover {
     background-color: var(--secondary);
     transform: translateY(-3px);
   }

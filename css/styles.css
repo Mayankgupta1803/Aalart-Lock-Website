@@ -104,13 +104,14 @@ ul {
     font-family: 'Montserrat', sans-serif;
 }
 
+
 .btn-primary {
     background-color: var(--primary);
     color: var(--white);
 }
 
 .btn-primary:hover {
-    background-color: var(--dark-blue);
+    background-color: var(--secondary);
     color: var(--white);
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(5, 45, 86, 0.3);
@@ -336,6 +337,7 @@ footer {
     background-color: var(--dark-blue);
     color: var(--white);
     padding: 4rem 0 2rem;
+    font-size: 1.5rem;
 }
 
 .footer-content {
@@ -343,6 +345,7 @@ footer {
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 3rem;
+    font-size: 1.4rem;
 }
 
 .footer-logo {
@@ -360,7 +363,7 @@ footer {
 .footer-logo .logo-text p {
     color: var(--secondary);
     margin: 0;
-    font-size: 0.7rem;
+    font-size: 1.2rem;
 }
 
 .footer-links {
@@ -413,13 +416,14 @@ footer {
     align-items: flex-start;
     margin-bottom: 1rem;
     color: rgba(255, 255, 255, 0.7);
-    font-size: 0.9rem;
+    font-size: 1.2rem;
 }
 
 .contact-info li i {
     color: var(--secondary);
     margin-right: 0.75rem;
     margin-top: 5px;
+    font-size: 1.1rem;
 }
 
 .footer-bottom {
@@ -436,8 +440,8 @@ footer {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background-color: rgba(255, 255, 255, 0.1);
     color: var(--white);
     border-radius: 50%;
@@ -448,6 +452,17 @@ footer {
 .social-icons a:hover {
     background-color: var(--secondary);
     transform: translateY(-3px);
+}
+
+.IndiaMart {
+    width:200px ;
+    margin-bottom: 0.5rem;
+    height: 90px;
+    align-items: center;
+    justify-content: right;
+    display: inline-flex;
+    /* margin: 0px; */
+
 }
 
 .footer-bottom p {
